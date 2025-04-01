@@ -1,0 +1,111 @@
+.contact_container {
+
+    .contact_info_global_container {
+        @include df($jc: space-between, $fwrap: wrap);
+        gap: rem_calc(10);
+        margin-bottom: rem_calc(40);
+
+        // importation de contact info card
+    }
+
+    .contact_text {
+        font-size: rem_calc(15);
+        text-align: justify;
+        margin-bottom: rem_calc(40);
+
+        .important {
+            color: $main3;
+            font-size: rem_calc(18);
+            font-weight: bold;
+        }
+    }
+
+    .contact_form {
+        .label_input_error_container {
+            @include df($dir: column, );
+            height: rem_calc(65);
+            margin-bottom: rem_calc(20);
+
+            ._label {
+                font-size: rem_calc(16);
+                font-weight: bold;
+                margin-bottom: rem_calc(10);
+            }
+
+            ._input {
+                color: $customBlack;
+                @include h_w($w: 100%);
+                border: none;
+                outline: none;
+                font-size: rem_calc(16);
+                font-weight: 600;
+                padding: rem_calc(0);
+                border-bottom: rem_calc(1) solid;
+                margin-bottom: rem_calc(5);
+            }
+
+            ._error {
+                color: $errorColor;
+                font-size: rem_calc(12);
+            }
+        }
+
+        .submit_btn {
+            background-color: $main3;
+            color: $white;
+            @include df($ai: center);
+            gap: rem_calc(10);
+
+            padding: rem_calc(10) rem_calc(20);
+            border: rem_calc(1) solid $main3;
+            border-radius: rem_calc(10);
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+
+            .send_name {
+                font-size: rem_calc(18);
+                z-index: 1;
+                transition: color 0.3s ease-in-out;
+            }
+
+            .send_icon {
+                font-size: rem_calc(20);
+                z-index: 1;
+                transition: color 0.3s ease-in-out;
+            }
+
+            &::before {
+                content: '';
+
+                background-color: $white;
+                @include h_w_e($v: rem_calc(0));
+                @include pos_abs_t_l($t: 50%, $l: 50%);
+                transform: translate(-50%, -50%);
+                border-radius: inherit;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover {
+                color: $main3;
+
+                &::before {
+                    @include h_w($h: 100%, $w: 99%);
+                }
+            }
+        }
+    }
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(710)) {
+    .contact_container {
+        .contact_text {
+            font-size: rem_calc(16);
+
+            .important {
+                font-size: rem_calc(16);
+            }
+        }
+    }
+}

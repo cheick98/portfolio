@@ -1,0 +1,35 @@
+header {
+    @include df($ai: center, $jc: flex-end);
+    margin-bottom: rem_calc(10);
+
+    .sitename {
+        @include text($color: $black, $fz: rem_calc(22), $fw: 800);
+    }
+
+    .theme_icon_container {
+        background-color: $main2;
+        @include h_w_e($v: rem_calc(35));
+        @include df($ai: center, $jc: center);
+        border-radius: 50%;
+        cursor: pointer;
+
+        .theme_icon {
+            font-size: rem_calc(18);
+        }
+    }
+}
+
+// dark mode
+header.dark {
+    .sitename {
+        color: $white;
+    }
+
+    .theme_icon_container {
+        background-color: $darkCard;
+
+        .theme_icon {
+            color: $white;
+        }
+    }
+}

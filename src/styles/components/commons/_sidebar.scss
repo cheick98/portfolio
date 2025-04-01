@@ -1,0 +1,196 @@
+.sidebar_container {
+    background-color: $white;
+    @include h_w($h: rem_calc(760), $w: rem_calc(400));
+    margin-top: rem_calc(90);
+    padding: rem_calc(110) rem_calc(20) rem_calc(20);
+    border-radius: rem_calc(10);
+    position: relative;
+
+    .photo_container {
+        @include h_w($h: rem_calc(190), $w: rem_calc(170));
+        @include pos_abs_t_l($t: - calc(rem_calc(90)), $l: 50%);
+        transform: translateX(-50%);
+        border: rem_calc(1) solid $main2;
+        border-radius: rem_calc(10);
+
+        .photo {
+            @include image;
+            border-radius: rem_calc(10);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover {
+            .photo {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+
+    .name_role_container {
+        text-align: center;
+
+        .name {
+            margin-bottom: rem_calc(5);
+            font-size: rem_calc(28);
+        }
+
+        .role {
+            color: $textColor;
+            font-size: rem_calc(16);
+            text-transform: capitalize;
+        }
+    }
+
+    .social_network_container {
+        margin-top: rem_calc(20);
+        @include df($ai: center, $jc: space-evenly);
+        gap: rem_calc(10);
+
+        .icon_container {
+            background-color: $main2;
+            @include h_w_e($v: rem_calc(50));
+            @include df($ai: center, $jc: center);
+            padding: rem_calc(15);
+            border: rem_calc(1) solid $main2;
+            border-radius: rem_calc(10);
+            transition: border 0.5s ease;
+
+            .icon {
+                @include image;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            &:hover {
+                border: rem_calc(1) solid $main3;
+                transition: border 0.5s ease;
+
+                .icon {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+
+    .sidebar_contact_container {
+        margin-top: rem_calc(20);
+        background-color: $main2;
+        padding: rem_calc(20);
+        border-radius: rem_calc(10);
+
+        .icon_info_container {
+
+            .icon_name_container {
+                @include df($ai: center);
+                gap: rem_calc(10);
+                margin-bottom: rem_calc(5);
+
+                .icon {
+                    color: $main3;
+                    font-size: rem_calc(20);
+                }
+
+                .icon_name {
+                    font-size: rem_calc(18);
+                }
+            }
+
+            .info {
+                color: $black;
+                font-size: rem_calc(16);
+            }
+        }
+
+        .divider {
+            margin: rem_calc(20) rem_calc(0);
+        }
+
+        .cv_global_container {
+            @include df($ai: center, $jc: center);
+
+            .cv_container {
+                background-color: $main3;
+                @include df($ai: center, $jc: center);
+                gap: rem_calc(10);
+                padding: rem_calc(10) rem_calc(30);
+                border: rem_calc(1) solid $main3;
+                border-radius: rem_calc(10);
+                position: relative;
+
+                .cv_icon {
+                    color: $white;
+                    font-size: rem_calc(25);
+                    z-index: 1;
+                    transition: color 0.5s ease;
+                }
+
+                .cv_name {
+                    color: $white;
+                    z-index: 1;
+                    transition: color 0.5s ease;
+                }
+
+                &::before {
+                    content: '';
+
+                    background-color: $main2;
+                    @include h_w($h: rem_calc(0), $w: rem_calc(0));
+                    position: absolute;
+                    transition: all 0.5s ease;
+                }
+
+                &:hover {
+                    .cv_icon {
+                        color: $main3;
+                    }
+
+                    .cv_name {
+                        color: $main3;
+                    }
+
+                    &::before {
+                        @include h100_w100;
+                        border-radius: inherit;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(920)) {
+    .sidebar_container {
+        @include h_w($h: auto, $w: 100%);
+        padding: rem_calc(110) rem_calc(10) rem_calc(10);
+        display: none;
+
+        .name_role_container {
+            .name {
+                font-size: rem_calc(24);
+            }
+
+            .role {
+                font-size: rem_calc(15);
+            }
+        }
+
+        .social_network_container {
+            margin-top: rem_calc(10);
+        }
+
+        .sidebar_contact_container {
+            margin-top: rem_calc(10);
+
+            .icon_info_container {
+                .info {
+                    font-size: rem_calc(14);
+                }
+            }
+
+            .divider {
+                margin: rem_calc(10) rem_calc(0);
+            }
+        }
+    }
+}

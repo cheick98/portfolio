@@ -1,0 +1,109 @@
+.skill_container {
+    background-color: $main2;
+    width: 49%;
+    padding: rem_calc(10);
+    border-radius: rem_calc(10);
+    border: rem_calc(1) solid $main2;
+    position: relative;
+    transition: border 0.3s ease-in-out;
+
+    &:nth-child(2) {
+        background-color: rgba($color: $main3, $alpha: 0.5);
+    }
+
+    .skill_icon_name_container {
+        @include df($ai: center);
+        gap: rem_calc(5);
+        margin-bottom: rem_calc(5);
+
+        .skill_icon {
+            font-size: rem_calc(18);
+            z-index: 1;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .skill_name {
+            font-size: rem_calc(19);
+            z-index: 1;
+            transition: color 0.3s ease-in-out;
+        }
+    }
+
+    .skill_description {
+        font-size: rem_calc(13);
+        text-align: justify;
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+
+        background-color: $white;
+        @include h_w_e($v: rem_calc(0));
+        @include pos_abs_t_l($t: 50%, $l: 50%);
+        transform: translate(-50%, -50%);
+        border-radius: inherit;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        border-color: $main3;
+
+        .skill_icon_name_container {
+
+            .skill_icon,
+            .skill_name {
+                color: $main3;
+            }
+        }
+
+        &::before {
+            @include h_w($h: 100%, $w: 99.5%);
+        }
+    }
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(825)) {
+    .skill_container {
+        width: 100%;
+    }
+}
+
+@media (min-width: rem_calc(826)) and (max-width: rem_calc(1214)) {
+    .skill_container {
+        width: 100%;
+
+        .skill_icon_name_container {
+            gap: rem_calc(2);
+
+            .skill_icon {
+                font-size: rem_calc(18);
+            }
+
+            .skill_name {
+                font-size: rem_calc(19);
+            }
+        }
+
+        .skill_description {
+            font-size: rem_calc(14);
+        }
+    }
+}
+
+@media (max-width: rem_calc(440)) {
+    .skill_container {
+        .skill_icon_name_container {
+            gap: rem_calc(3);
+
+            .skill_icon {
+                font-size: rem_calc(16);
+            }
+
+            .skill_name {
+                font-size: rem_calc(16);
+            }
+        }
+    }
+}

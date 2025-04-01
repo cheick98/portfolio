@@ -1,0 +1,160 @@
+.portfolio_modal_card_container {
+    width: 100%;
+    min-height: 100vh;
+    @include pos_fix_t_l($t: rem_calc(0), $l: rem_calc(0));
+    @include df($ai: center, $jc: center);
+    z-index: 100;
+
+    .overlay {
+        background-color: rgba($color: $black, $alpha: 0.7);
+        @include h100_w100;
+        min-height: 100vh;
+        @include pos_abs_t_l;
+    }
+
+    .modal_content_container {
+        background-color: $white;
+        padding: rem_calc(20);
+        border-radius: rem_calc(20);
+        max-height: 90%;
+        max-width: 90%;
+        z-index: 900;
+        @include df($dir: column, $jc: space-between);
+
+        .modal_tite_close_container {
+            width: 100%;
+            @include df($ai: center, $jc: space-between);
+            margin-bottom: rem_calc(10);
+
+            .title {
+                color: $main3;
+                font-size: rem_calc(20);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .close_icon {
+                background-color: $customBlack;
+                color: $white;
+                font-size: rem_calc(40);
+                padding: rem_calc(10);
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+
+        .modal_body_container {
+            max-height: calc(100vh - (rem_calc(80) + rem_calc(50))); // 80 = deux padding de 20 20 ce qui fait 40 40
+            width: rem_calc(500);
+            max-width: 100%;
+            overflow-y: auto;
+
+            .portfolio_img_container {
+                @include h_w($h: rem_calc(200), $w: 100%);
+                margin-bottom: rem_calc(10);
+                border: rem_calc(1) solid $main3;
+                border-radius: rem_calc(10);
+
+                .portfolio_img {
+                    @include image;
+                    border-radius: inherit;
+                }
+            }
+
+            .info_tech_container {
+                .info_see_icon_container {
+                    @include df($ai: center, $jc: space-between, $fwrap: wrap);
+                    gap: rem_calc(10);
+                    margin-bottom: rem_calc(10);
+
+                    .info_container {
+                        width: calc(100% - (rem_calc(40) + rem_calc(10)));
+
+                        .type {
+                            color: $customBlack;
+                        }
+
+                        .title {
+                            font-size: rem_calc(20);
+                        }
+                    }
+
+                    .see_icon_container {
+                        background-color: $main3;
+                        @include h_w_e($v: rem_calc(40));
+                        @include df($ai: center, $jc: center);
+                        padding: rem_calc(10);
+                        border: rem_calc(1) solid $main3;
+                        border-radius: rem_calc(0);
+                        position: relative;
+                        transition: border 0.3s ease-in-out;
+                        cursor: pointer;
+
+                        .see_icon {
+                            color: $white;
+                            z-index: 1;
+                            transition: color 0.3s ease-in-out;
+                        }
+
+                        &::before {
+                            content: '';
+
+                            background-color: $white;
+                            @include h_w_e($v: rem_calc(0));
+                            @include pos_abs_t_l($t: 50%, $l: 50%);
+                            transform: translate(-50%, -50%);
+                            border-radius: inherit;
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        &:hover {
+                            .see_icon {
+                                color: $main3;
+                            }
+
+                            &::before {
+                                // @include h_w($h: 100%, $w: 99.5%);
+                                @include h100_w100;
+                            }
+                        }
+
+                    }
+                }
+
+                .description {
+                    font-size: rem_calc(14);
+                    text-align: justify;
+                    margin-bottom: rem_calc(10);
+                }
+
+                .technologie_container {
+                    margin-bottom: rem_calc(10);
+
+                    .icon_title_container {
+                        @include df($ai: center, );
+                        gap: rem_calc(10);
+                        margin-bottom: rem_calc(10);
+
+                        .icon {
+                            color: $main3;
+                            font-size: rem_calc(25);
+                        }
+
+                        .title {
+                            font-size: rem_calc(20);
+                        }
+                    }
+
+                    .technologie_content_container {
+                        @include df($ai: center, $fwrap: wrap);
+                        gap: rem_calc(10);
+
+                        .technologie {
+                            @include animation_hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

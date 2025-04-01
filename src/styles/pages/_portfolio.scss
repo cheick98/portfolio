@@ -1,0 +1,52 @@
+.portfolio_container {
+
+    // menu
+    .portfolio_menu_container {
+        @include df($ai: center, $jc: flex-end);
+        margin-bottom: rem_calc(15);
+
+        .portfolio_menu {
+            @include df($ai: center, );
+            gap: rem_calc(35);
+
+            .portfolio_menu_item {
+                text-transform: capitalize;
+                cursor: pointer;
+
+                &.active {
+                    color: $main3;
+                    font-size: rem_calc(17);
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    color: $main3;
+                }
+            }
+        }
+    }
+
+    .portfolio_content_container {
+        @include df($ai: center, $fwrap: wrap);
+        gap: rem_calc(10);
+
+        // importation du portfolio info card
+    }
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(425)) {
+    .portfolio_container {
+        .portfolio_menu_container {
+            .portfolio_menu {
+                .portfolio_menu_item {
+                    font-size: rem_calc(14);
+
+                    &.active {
+                        font-size: rem_calc(15);
+                    }
+                }
+            }
+        }
+    }
+}

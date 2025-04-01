@@ -1,0 +1,26 @@
+.menu_global_container {
+    height: rem_calc(80);
+    margin-bottom: rem_calc(10);
+    @include df($ai: center, $jc: flex-end);
+
+    .menu_list_container {
+        background-color: $menuBgColor;
+        height: 100%;
+        @include df($ai: center, $jc: space-around);
+        gap: rem_calc(30);
+        border: rem_calc(1) solid $main2;
+        border-radius: rem_calc(10);
+        padding: rem_calc(10);
+
+        // importation du menu item
+    }
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(830)) {
+    .menu_global_container {
+        .menu_list_container {
+            gap: rem_calc(20);
+        }
+    }
+}

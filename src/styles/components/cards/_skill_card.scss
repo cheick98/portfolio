@@ -1,0 +1,10 @@
+.competence_name {
+    @include animation_hover;
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(430)) {
+    .competence_name {
+        font-size: rem_calc(12);
+    }
+}

@@ -1,0 +1,67 @@
+.menu_container {
+    @include h_w_e($v: rem_calc(60));
+
+    .menu_icon_name_container {
+        position: relative;
+        background-color: $main2;
+        @include h100_w100;
+        @include df($ai: center, $jc: center, $dir: column);
+        gap: rem_calc(5);
+        padding: rem_calc(10);
+        border: rem_calc(1) solid $main2;
+        border-radius: rem_calc(10);
+        transition: border 0.3s ease-in-out;
+        position: relative;
+
+        .menu_icon {
+            color: $black;
+            font-size: rem_calc(18);
+            z-index: 1;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .menu_name {
+            color: $black;
+            font-size: rem_calc(11);
+            z-index: 1;
+            transition: color 0.3s ease-in-out;
+        }
+
+        &::before {
+            content: '';
+
+            background-color: $menuBgColor;
+            @include h_w_e($v: rem_calc(0));
+            position: absolute;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &:hover {
+        .menu_icon_name_container {
+            border: rem_calc(1) solid $main3;
+
+            &::before {
+                @include h100_w100;
+                border-radius: inherit;
+            }
+        }
+    }
+}
+
+// quand le menu est active
+.menu_container {
+    .menu_icon_name_container.active {
+        background-color: $main3;
+        border: rem_calc(1) solid $main3;
+
+        .menu_icon,
+        .menu_name {
+            color: $customBlack;
+        }
+
+        &::before {
+            background-color: $main3;
+        }
+    }
+}

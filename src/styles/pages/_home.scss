@@ -1,0 +1,54 @@
+.home_container {
+
+    .presentation {
+        font-size: rem_calc(16);
+        text-align: justify;
+        margin-bottom: rem_calc(15);
+
+        .important {
+            color: $main3;
+            font-size: rem_calc(18);
+            font-weight: bold;
+        }
+    }
+
+    .work_skill_container {
+        .title {
+            font-size: rem_calc(22);
+            text-transform: uppercase;
+            margin-bottom: rem_calc(15);
+        }
+
+        .skill_global_container {
+            @include df($jc: space-between, $fwrap: wrap);
+            gap: rem_calc(15);
+
+            // importation du work skill
+        }
+    }
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(560)) {
+    .home_container {
+        .presentation {
+            font-size: rem_calc(13);
+        }
+    }
+}
+
+@media (min-width: rem_calc(561)) and (max-width: rem_calc(920)) {
+    .home_container {
+        .presentation {
+            font-size: rem_calc(14);
+        }
+    }
+}
+
+@media (min-width: rem_calc(921)) and (max-width: rem_calc(1214)) {
+    .home_container {
+        .presentation {
+            font-size: rem_calc(15);
+        }
+    }
+}

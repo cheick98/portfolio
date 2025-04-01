@@ -1,0 +1,95 @@
+.education_experience_content {
+    background-color: $main2;
+    @include h_w($w: 100%);
+    @include df($dir: column, );
+    gap: rem_calc(5);
+    padding: rem_calc(15);
+    border: rem_calc(1) solid $main2;
+    border-radius: rem_calc(10);
+    position: relative;
+    transition: border 0.3s ease-in-out;
+
+    .year {
+        color: $customBlack;
+        font-size: rem_calc(14);
+        z-index: 1;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .name_link_container {
+        font-size: rem_calc(15);
+        @include df($ai: center, );
+        gap: rem_calc(5);
+        z-index: 1;
+        transition: color 0.3s ease-in-out;
+
+        .link_container {
+            @include df($ai: center, );
+
+            .link {
+                color: $black;
+                font-size: rem_calc(14);
+                transition: color 0.3s ease-in-out;
+            }
+        }
+    }
+
+    .role {
+        color: $customBlack;
+        font-size: rem_calc(14);
+        z-index: 1;
+        transition: color 0.3s ease-in-out;
+    }
+
+    &::before {
+        content: '';
+
+        background-color: $white;
+        @include h_w_e($v: rem_calc(0));
+        @include pos_abs_t_l($t: 50%, $l: 50%);
+        transform: translate(-50%, -50%);
+        border-radius: inherit;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        border-color: $main3;
+
+        .name_link_container {
+            color: $main3;
+
+            .link_container {
+                .link {
+                    color: $main3;
+                }
+            }
+        }
+
+        &::before {
+            @include h_w($h: 100%, $w: 99.5%);
+        }
+    }
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(430)) {
+    .education_experience_content {
+        .year {
+            font-size: rem_calc(12);
+        }
+
+        .name_link_container {
+            font-size: rem_calc(12);
+
+            .link_container {
+                .link {
+                    font-size: rem_calc(10);
+                }
+            }
+        }
+
+        .role {
+            font-size: rem_calc(11);
+        }
+    }
+}

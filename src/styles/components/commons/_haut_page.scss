@@ -1,0 +1,17 @@
+.haut_page_container {
+    @include df($ai: center);
+    gap: rem_calc(20);
+    margin-bottom: rem_calc(15);
+
+    .name {
+        font-size: rem_calc(20);
+        text-transform: uppercase;
+    }
+
+    .row {
+        background-color: $main3;
+        @include h_w($h: rem_calc(5));
+        flex: 1;
+        border-radius: rem_calc(5);
+    }
+}

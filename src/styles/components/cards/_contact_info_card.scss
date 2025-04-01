@@ -1,0 +1,78 @@
+.contact_info_container {
+    background-color: $main2;
+    @include h_w($h: rem_calc(132), $w: 49%);
+    padding: rem_calc(30);
+    border: rem_calc(1) solid $main2;
+    border-radius: rem_calc(10);
+    position: relative;
+    transition: border 0.3s ease-in-out;
+
+    .contact_icon_name_container {
+        @include df($ai: center, );
+        gap: rem_calc(10);
+        margin-bottom: rem_calc(10);
+
+        .contact_icon {
+            color: $main3;
+            font-size: rem_calc(20);
+            z-index: 1;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .contact_name {
+            font-size: rem_calc(16);
+            z-index: 1;
+            transition: color 0.3s ease-in-out;
+        }
+    }
+
+    .contact_info {
+        color: $black;
+        font-size: rem_calc(15);
+        // margin-left: rem_calc(30);
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+
+        background-color: $white;
+        @include h_w_e($v: rem_calc(0));
+        @include pos_abs_t_l($t: 50%, $l: 50%);
+        transform: translate(-50%, -50%);
+        border-radius: inherit;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        border-color: $main3;
+
+        .contact_icon_name_container {
+
+            .contact_name {
+                color: $main3;
+            }
+        }
+
+        &::before {
+            @include h_w($h: 100%, $w: 99%);
+        }
+    }
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(710)) {
+    .contact_info_container {
+        width: 100%;
+
+        .contact_info {
+            font-size: rem_calc(13);
+        }
+    }
+}
+
+@media (min-width: rem_calc(921)) and (max-width: rem_calc(1110)) {
+    .contact_info_container {
+        width: 100%;
+    }
+}

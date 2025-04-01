@@ -1,0 +1,32 @@
+// importation utils
+@import './utils/variables';
+@import './utils/functions';
+@import './utils/mixins';
+@import './settings';
+
+// components/commons
+@import './components/commons/header';
+@import './components/commons/sidebar';
+@import './components/commons/haut_page';
+
+// components/cards
+@import './components/cards/skill_card';
+@import './components/cards/work_skill_card';
+@import './components/cards/contact_info_card';
+@import './components/cards/certification_card';
+@import './components/cards/portfolio_info_card';
+@import './components/cards/portfolio_modal_card';
+@import './components/cards/education_experience_card';
+
+// menu
+@import './components/commons/menu/menu';
+@import './components/commons/menu/menu_item';
+
+// container
+@import './components/commons/container/layout';
+
+// pages
+@import './pages/home';
+@import './pages/resume';
+@import './pages/contact';
+@import './pages/portfolio';

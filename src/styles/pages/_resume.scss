@@ -1,0 +1,69 @@
+.resume_container {
+    @include df($jc: space-between, $fwrap: wrap);
+    gap: rem_calc(15);
+
+    .resume_content_container {
+        width: 49%;
+
+        .icon_name_container {
+            @include df($ai: center, );
+            gap: rem_calc(10);
+            margin-bottom: rem_calc(15);
+
+            .icon {
+                color: $main3;
+                font-size: rem_calc(24);
+            }
+
+            .name {
+                font-size: rem_calc(22);
+                text-transform: uppercase;
+            }
+        }
+
+        // education and experience
+        .education_experience_content_container {
+            @include df($dir: column, );
+            gap: rem_calc(15);
+
+            // importation education experience card
+        }
+
+        // certification
+        &.certification {
+            width: 100%;
+
+            .certification_container {
+                @include df($ai: center, $fwrap: wrap, );
+                gap: rem_calc(15);
+
+                // importation du certification card
+            }
+        }
+
+        // competence and comportement
+        .resume_skill_container {
+            @include df($ai: center, $fwrap: wrap, );
+            gap: rem_calc(10);
+
+            // importation du skill card 
+        }
+    }
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(815)) {
+    .resume_container {
+        .resume_content_container {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: rem_calc(921)) and (max-width: rem_calc(1225)) {
+    .resume_container {
+        .resume_content_container {
+            width: 100%;
+        }
+    }
+}

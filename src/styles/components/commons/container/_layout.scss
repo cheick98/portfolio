@@ -1,0 +1,63 @@
+.layout_global_container {
+    // background-color: $main;
+    background-color: $darkMain;
+    // @include h_w($h: 100vh);
+    min-height: 100vh;
+    @include df($ai: center, $jc: center);
+    padding: rem_calc(10);
+    overflow-y: auto;
+
+    .layout_container {
+        // border: 1px solid;
+        // @include h_w_e($v: 80%);
+        @include h_w($w: rem_calc(1250));
+        overflow-x: auto;
+
+        // importation du header
+
+        .layout_content_container {
+            // background: red;
+            @include df($fwrap: wrap, );
+            gap: rem_calc(10);
+
+            // importation du sidebar
+
+            .right_part_container {
+                // background: green;
+                @include h_w($h: 100%, $w: calc(100% - (rem_calc(400) + rem_calc(10))));
+
+                // importation du menu
+
+                .right_part {
+                    background-color: $white;
+                    height: rem_calc(760);
+                    padding: rem_calc(10);
+                    border-radius: rem_calc(10);
+                    overflow-y: auto;
+                }
+            }
+        }
+    }
+}
+
+// dark mode
+.layout_global_container.dark {
+    background-color: $darkMain;
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(920)) {
+    .layout_global_container {
+        .layout_container {
+            .layout_content_container {
+                flex-direction: column-reverse;
+
+                // importation du sidebar
+
+                .right_part_container {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

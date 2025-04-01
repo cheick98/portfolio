@@ -1,0 +1,119 @@
+.portfolio_info_container {
+    background-color: rgba($color: $main3, $alpha: 0.4);
+    width: 32%;
+    border-radius: rem_calc(10);
+    border: rem_calc(1) solid rgba($color: $main3, $alpha: 0.2);
+    transition: border 03s ease-in-out;
+
+    .portfolio_img_container {
+        @include h_w($h: rem_calc(90), $w: 100%);
+        border: rem_calc(1) solid rgba($color: $main3, $alpha: 0.5);
+        border-top-left-radius: rem_calc(10);
+        border-top-right-radius: rem_calc(10);
+
+        .portfolio_img {
+            @include image;
+            border-radius: inherit;
+            transition: padding 0.3s ease-in-out;
+        }
+    }
+
+    .type_title_desc_see_container {
+        @include df($ai: center, $jc: space-between);
+        gap: rem_calc(10);
+        padding: rem_calc(10);
+
+        .type_title_desc_container {
+            .type {
+                color: $customBlack;
+                font-size: rem_calc(12);
+            }
+
+            .title {
+                font-size: rem_calc(15);
+            }
+
+            .description {
+                font-size: rem_calc(8);
+            }
+        }
+
+        .see_icon_container {
+            background-color: $main3;
+            @include h_w_e($v: rem_calc(40));
+            @include df($ai: center, $jc: center);
+            padding: rem_calc(10);
+            border: rem_calc(1) solid $main3;
+            border-radius: rem_calc(0);
+            position: relative;
+            cursor: pointer;
+            transition: border 0.3s ease-in-out;
+
+            .see_icon {
+                color: $white;
+                z-index: 1;
+                transition: color 0.3s ease-in-out;
+            }
+
+            &::before {
+                content: '';
+
+                background-color: $white;
+                @include h_w_e($v: rem_calc(0));
+                @include pos_abs_t_l($t: 50%, $l: 50%);
+                transform: translate(-50%, -50%);
+                border-radius: inherit;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    &:hover {
+        .portfolio_img_container {
+            .portfolio_img {
+                padding: rem_calc(5);
+            }
+        }
+
+        .type_title_desc_see_container {
+            .see_icon_container {
+                border-color: $main3;
+
+                .see_icon {
+                    color: $main3;
+                }
+
+                &::before {
+                    // @include h_w($h: 100%, $w: 99.5%);
+                    @include h100_w100;
+                }
+            }
+        }
+    }
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(555)) {
+    .portfolio_info_container {
+        width: 100%;
+    }
+}
+
+@media (min-width: rem_calc(556)) and (max-width: rem_calc(710)) {
+    .portfolio_info_container {
+        width: 49%;
+    }
+}
+
+@media (min-width: rem_calc(921)) and (max-width: rem_calc(965)) {
+    .portfolio_info_container {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: rem_calc(966)) and (max-width: rem_calc(1120)) {
+    .portfolio_info_container {
+        width: 49%;
+    }
+}
