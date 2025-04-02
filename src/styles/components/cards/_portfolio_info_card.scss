@@ -10,11 +10,12 @@
         border: rem_calc(1) solid rgba($color: $main3, $alpha: 0.5);
         border-top-left-radius: rem_calc(10);
         border-top-right-radius: rem_calc(10);
+        overflow: hidden;
 
         .portfolio_img {
             @include image;
             border-radius: inherit;
-            transition: padding 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
         }
     }
 
@@ -71,7 +72,7 @@
     &:hover {
         .portfolio_img_container {
             .portfolio_img {
-                padding: rem_calc(5);
+                transform: scale(1.1);
             }
         }
 
