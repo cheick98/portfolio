@@ -26,19 +26,19 @@ const Sidebar = () => {
             </div>
 
             <div className='social_network_container'>
-                <Link to={'https://www.youtube.com/watch?v=HYXH1tcX4IY&ab_channel=AlFirdawsCanada'} target='_blank' rel='noreferrer' className='icon_container'>
+                <Link to={'https://www.facebook.com/cheickoumar.diabate.18/'} target='_blank' rel='noreferrer' className='icon_container'>
                     <img src='/icons/facebook.png' alt='Icon facebook' className='icon' />
                 </Link>
 
-                <Link to={'https://www.youtube.com/watch?v=HYXH1tcX4IY&ab_channel=AlFirdawsCanada'} target='_blank' rel='noreferrer' className='icon_container'>
+                <Link to={'https://www.linkedin.com/in/cheick-oumar-diabate-8b6819237/'} target='_blank' rel='noreferrer' className='icon_container'>
                     <img src='/icons/linkedin.png' alt='Icon linkedin' className='icon' />
                 </Link>
 
-                <Link to={'https://www.youtube.com/watch?v=HYXH1tcX4IY&ab_channel=AlFirdawsCanada'} target='_blank' rel='noreferrer' className='icon_container'>
+                <Link to={'https://x.com/Cheickoumar300'} target='_blank' rel='noreferrer' className='icon_container'>
                     <img src='/icons/twitter.png' alt='Icon twitter' className='icon' />
                 </Link>
 
-                <Link to={'https://www.youtube.com/watch?v=HYXH1tcX4IY&ab_channel=AlFirdawsCanada'} target='_blank' rel='noreferrer' className='icon_container'>
+                <Link to={'https://github.com/cheick98'} target='_blank' rel='noreferrer' className='icon_container'>
                     <img src='/icons/github.png' alt='Icon github' className='icon' />
                 </Link>
             </div>

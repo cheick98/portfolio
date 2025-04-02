@@ -8,8 +8,7 @@
     .overlay {
         background-color: rgba($color: $black, $alpha: 0.7);
         @include h100_w100;
-        min-height: 100vh;
-        @include pos_abs_t_l;
+        @include pos_fix_t_l;
     }
 
     .modal_content_container {
@@ -24,11 +23,12 @@
         .modal_tite_close_container {
             width: 100%;
             @include df($ai: center, $jc: space-between);
+            gap: rem_calc(10);
             margin-bottom: rem_calc(10);
 
             .title {
                 color: $main3;
-                font-size: rem_calc(20);
+                font-size: rem_calc(23);
                 font-weight: bold;
                 text-transform: uppercase;
             }
@@ -36,8 +36,8 @@
             .close_icon {
                 background-color: $customBlack;
                 color: $white;
-                font-size: rem_calc(40);
-                padding: rem_calc(10);
+                @include h_w_e($v: rem_calc(34));
+                padding: rem_calc(5);
                 border-radius: 50%;
                 cursor: pointer;
             }
@@ -117,7 +117,6 @@
                                 @include h100_w100;
                             }
                         }
-
                     }
                 }
 
@@ -151,6 +150,72 @@
 
                         .technologie {
                             @include animation_hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** RESPONSIVE **/
+@media (max-width: rem_calc(520)) {
+    .portfolio_modal_card_container {
+        .modal_content_container {
+            padding: rem_calc(10);
+
+            .modal_tite_close_container {
+                gap: rem_calc(5);
+
+                .title {
+                    font-size: rem_calc(16);
+                }
+
+                .close_icon {
+                    @include h_w_e($v: rem_calc(22));
+                }
+            }
+
+            .modal_body_container {
+                .info_tech_container {
+                    .info_see_icon_container {
+                        .info_container {
+                            width: calc(100% - (rem_calc(35) + rem_calc(10)));
+
+                            .type {
+                                color: $customBlack;
+                                font-size: rem_calc(14);
+                            }
+
+                            .title {
+                                font-size: rem_calc(16);
+                            }
+                        }
+
+                        .see_icon_container {
+                            @include h_w_e($v: rem_calc(35));
+                        }
+                    }
+
+                    .description {
+                        font-size: rem_calc(13);
+                    }
+
+                    .technologie_container {
+                        .icon_title_container {
+                            .icon {
+                                font-size: rem_calc(20);
+                            }
+
+                            .title {
+                                font-size: rem_calc(18);
+                            }
+                        }
+
+                        .technologie_content_container {
+                            .technologie {
+                                font-size: rem_calc(12);
+                            }
                         }
                     }
                 }
