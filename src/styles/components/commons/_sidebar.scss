@@ -163,7 +163,7 @@
     .sidebar_container {
         @include h_w($h: auto, $w: 100%);
         padding: rem_calc(110) rem_calc(10) rem_calc(10);
-        display: none;
+        // display: none;
 
         .name_role_container {
             .name {
