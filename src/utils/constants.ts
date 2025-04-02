@@ -68,9 +68,9 @@ export const realisations: REALISATION_TYPE[] = [
         description: `Mon tout premier projet en React, encadré par le formateur en ligne DONKEY GEEK.`,
         technologies: ['ReactJS', 'Firebase', 'JavaScript'],
         images: [
-            '/portfolio/images/marvel/1.png',
-            '/portfolio/images/marvel/2.png',
-            '/portfolio/images/marvel/3.png',
+            '/images/marvel/1.png',
+            '/images/marvel/2.png',
+            '/images/marvel/3.png',
         ]
     },
     {
@@ -78,10 +78,10 @@ export const realisations: REALISATION_TYPE[] = [
         description: `Après mon premier projet encadré, j'ai voulu recréer quelques fonctionnalités de Facebook.`,
         technologies: ['ReactJS', 'MongoDB', 'Redux', 'NodeJS', 'ExpressJS', 'Socket IO', 'Multer', 'JavaScript'],
         images: [
-            '/portfolio/images/imi-fb/1.png',
-            '/portfolio/images/imi-fb/2.png',
-            '/portfolio/images/imi-fb/3.png',
-            '/portfolio/images/imi-fb/4.png',
+            '/images/imi-fb/1.png',
+            '/images/imi-fb/2.png',
+            '/images/imi-fb/3.png',
+            '/images/imi-fb/4.png',
         ]
     },
     {
@@ -89,10 +89,10 @@ export const realisations: REALISATION_TYPE[] = [
         description: 'Plateforme de financement participatif dédiée aux associations et ONGs',
         technologies: ['WordPress'],
         images: [
-            '/portfolio/images/jigiasso/1.png',
-            '/portfolio/images/jigiasso/2.png',
-            '/portfolio/images/jigiasso/3.png',
-            '/portfolio/images/jigiasso/4.png',
+            '/images/jigiasso/1.png',
+            '/images/jigiasso/2.png',
+            '/images/jigiasso/3.png',
+            '/images/jigiasso/4.png',
         ]
     },
     {
@@ -100,11 +100,11 @@ export const realisations: REALISATION_TYPE[] = [
         description: `Site vitrine pour une Société par Actions Simplifiées, SAS, d’Expertise Comptable et de Commissariat aux Comptes inscrite à l’Ordre National des Experts Comptables et Comptables Agréés, ONECCA Mali.`,
         technologies: ['WordPress'],
         images: [
-            '/portfolio/images/gama/1.png',
-            '/portfolio/images/gama/2.png',
-            '/portfolio/images/gama/3.png',
-            '/portfolio/images/gama/4.png',
-            '/portfolio/images/gama/5.png',
+            '/images/gama/1.png',
+            '/images/gama/2.png',
+            '/images/gama/3.png',
+            '/images/gama/4.png',
+            '/images/gama/5.png',
         ]
     },
     {
@@ -112,8 +112,8 @@ export const realisations: REALISATION_TYPE[] = [
         description: `Gestionnaire de l'application mobile infoToxic`,
         technologies: ['ReactJS', 'ViteJs', 'MySQL', 'Docker', 'Redux', 'NodeJS', 'ExpressJS', 'Minio', 'SCSS'],
         images: [
-            '/portfolio/images/infoTox/backoffice/1.png',
-            '/portfolio/images/infoTox/backoffice/2.png',
+            '/images/infoTox/backoffice/1.png',
+            '/images/infoTox/backoffice/2.png',
         ]
     },
     {
@@ -121,11 +121,11 @@ export const realisations: REALISATION_TYPE[] = [
         description: `InfoToxic est une application de partage d'informations sur ce sujet, provenant de n'importe où.`,
         technologies: ['React Native', 'Redux', 'TypeScript'],
         images: [
-            '/portfolio/images/infoTox/mobile/1.jpeg',
-            '/portfolio/images/infoTox/mobile/2.jpeg',
-            '/portfolio/images/infoTox/mobile/3.jpeg',
-            '/portfolio/images/infoTox/mobile/4.jpeg',
-            '/portfolio/images/infoTox/mobile/5.jpeg',
+            '/images/infoTox/mobile/1.jpeg',
+            '/images/infoTox/mobile/2.jpeg',
+            '/images/infoTox/mobile/3.jpeg',
+            '/images/infoTox/mobile/4.jpeg',
+            '/images/infoTox/mobile/5.jpeg',
         ]
     },
     {
@@ -133,9 +133,9 @@ export const realisations: REALISATION_TYPE[] = [
         description: `Empay est une application qui permet de recharger sa carte UBA grâce à Vitepay.`,
         technologies: ['React Native', 'Redux', 'TypeScript'],
         images: [
-            '/portfolio/images/empay/mobile/1.jpeg',
-            '/portfolio/images/empay/mobile/2.jpeg',
-            '/portfolio/images/empay/mobile/3.jpeg',
+            '/images/empay/mobile/1.jpeg',
+            '/images/empay/mobile/2.jpeg',
+            '/images/empay/mobile/3.jpeg',
         ]
     },
     {
@@ -143,8 +143,8 @@ export const realisations: REALISATION_TYPE[] = [
         description: `Daneela est une application qui permet de lister les sites de vente en ligne en collaboration avec LOGINEO.`,
         technologies: ['React Native', 'Redux', 'TypeScript'],
         images: [
-            '/portfolio/images/daneela/mobile/1.jpeg',
-            '/portfolio/images/daneela/mobile/2.jpeg',
+            '/images/daneela/mobile/1.jpeg',
+            '/images/daneela/mobile/2.jpeg',
         ]
     },
     {
@@ -152,10 +152,10 @@ export const realisations: REALISATION_TYPE[] = [
         description: `LeBamakoi est une application qui permet de récupérer les informations provenant des sites proposant un flux RSS au Mali.`,
         technologies: ['React Native', 'Redux', 'TypeScript'],
         images: [
-            '/portfolio/images/leBamakoi/1.jpeg',
-            '/portfolio/images/leBamakoi/2.jpeg',
-            '/portfolio/images/leBamakoi/3.jpeg',
-            '/portfolio/images/leBamakoi/4.jpeg',
+            '/images/leBamakoi/1.jpeg',
+            '/images/leBamakoi/2.jpeg',
+            '/images/leBamakoi/3.jpeg',
+            '/images/leBamakoi/4.jpeg',
         ]
     },
 ]

@@ -39,6 +39,8 @@
     .portfolio_container {
         .portfolio_menu_container {
             .portfolio_menu {
+                gap: rem_calc(20);
+
                 .portfolio_menu_item {
                     font-size: rem_calc(14);
 
