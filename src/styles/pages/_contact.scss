@@ -15,7 +15,6 @@
 
         .important {
             color: $main3;
-            font-size: rem_calc(18);
             font-weight: bold;
         }
     }
@@ -101,11 +100,7 @@
 @media (max-width: rem_calc(710)) {
     .contact_container {
         .contact_text {
-            font-size: rem_calc(16);
-
-            .important {
-                font-size: rem_calc(16);
-            }
+            font-size: rem_calc(15);
         }
     }
 }
