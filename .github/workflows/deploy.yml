@@ -1,0 +1,40 @@
+name: Build and Deploy to Second Repo
+on: 
+    push: 
+        branches: 
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-22.04
+        steps:
+            - name: 🛎️ Checkout du repo
+              uses: actions/checkout@v4
+
+            - name: 📦 Installer les dépendances
+              run: npm install
+              
+            - name: 🔨 Build du projet
+              run: npm run build
+
+            - name: 🚀 Déploiement vers le 2ème repo
+              run: |
+                cd dist
+
+                # Vérifie si un dépôt git est déjà initialisé
+                if [ ! -d ".git" ]; then
+                  git init
+                  git config --global user.name "github-actions[bot]"
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+                  git branch -M main
+                fi
+
+                git add .
+                git commit -m "🚀 Mise à jour automatique du build"
+                
+                # Utilisation du token pour le push
+                git remote add origin https://x-access-token:${{ secrets.PAT_SECRET }}@github.com/cheick98/cheick98.github.io.git
+                git push -f origin main
+
+            - name: ✅ Fin de la tâche
+              run: echo "Tout est bon"
