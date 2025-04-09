@@ -22,8 +22,8 @@ export const educations = [
 ]
 
 export const experiences = [
-    { year: '05/2023 – 03/2025', name: 'Logineo', role: `Développeur Full-Stack Web / Mobile`, link: 'https://logineo.com/' },
-    { year: '06/2022 – 05/2023', name: 'Logineo', role: `Stage: Développeur Full-Stack Web / Mobile`, link: 'https://logineo.com/' },
+    { year: '06/2022 – 03/2025', name: 'Logineo', role: `Développeur Full-Stack Web / Mobile`, link: 'https://logineo.com/' },
+    // { year: '06/2022 – 05/2023', name: 'Logineo', role: `Stage: Développeur Full-Stack Web / Mobile`, link: 'https://logineo.com/' },
 ]
 
 export const certifications = [
