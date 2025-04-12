@@ -47,6 +47,7 @@ export const competences = [
     { name: 'BootStrap, Material-UI, TailwindCss' },
     { name: 'WordPress' },
     { name: 'ReactJS, React Native' },
+    { name: 'Angular' },
     { name: 'MySQL, MongoDB, Firebase, PostgreSQL' },
     { name: 'Git/GitHub, Docker' },
     { name: 'Windows, Linux' },
