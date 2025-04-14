@@ -44,6 +44,7 @@ export const competences = [
     { name: 'NodeJS' },
     { name: 'ExpressJS' },
     { name: 'NestJS' },
+    { name: 'Prisma' },
     { name: 'BootStrap, Material-UI, TailwindCss' },
     { name: 'WordPress' },
     { name: 'ReactJS, React Native' },
