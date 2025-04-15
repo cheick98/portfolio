@@ -82,7 +82,7 @@ export const realisations: REALISATION_TYPE[] = [
     },
     {
         type: 'web', title: 'Jigiasso',
-        description: 'Plateforme de financement participatif dédiée aux associations et ONGs',
+        description: 'Plateforme de financement participatif dédiée aux associations et ONGs. Le don se fait en ligne grace à VITEPAY à travers (ORANGE MONEY, MOOV MONEY, SAMA MONEY, VISA CARD',
         technologies: ['WordPress'],
         images: [
             '/images/jigiasso/1.png',
